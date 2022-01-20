@@ -1,3 +1,3 @@
 # SwagLabs
 
-Automation testing
+Automation testing.
