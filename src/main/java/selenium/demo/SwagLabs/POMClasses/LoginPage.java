@@ -13,26 +13,23 @@ public class LoginPage {
 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
-
 		txtUsername = driver.findElement(By.xpath("//input[@id=\"user-name\"]"));
-		txtPassword = driver.findElement(By.cssSelector("input[id=\"password\"]"));
+		txtPassword = driver.findElement(By.xpath("//input[@id=\"password\"]"));
 		btnLogin = driver.findElement(By.xpath("//input[@id=\"login-button\"]"));
 
 	}
 
-	public void setUsername(String s) {
-		txtUsername.sendKeys(s);
+	public void SetUsername(String username) {
+		txtUsername.sendKeys(username);
 	}
 
-	public void setPassword(String t) {
-		txtPassword.sendKeys(t);
+	public void SetPassword(String password) {
+		txtPassword.sendKeys(password);
 	}
-	
-	public void clickLogin() {
+
+	public void ClickLogin() {
 		btnLogin.click();
 	}
 	
-	public String getURL() {
-		return driver.getCurrentUrl();
-	}
+
 }
